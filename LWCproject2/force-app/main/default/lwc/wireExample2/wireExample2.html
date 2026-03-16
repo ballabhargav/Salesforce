@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Wire Decorator to call Apex method">
+        <template if:true={accounts.data}>
+            <template for:each={accounts.data} for:item="acc">
+                <div key={acc.id}>
+                    <div>Name: {acc.Name}</div>
+                    <div>Phone: {acc.Phone}</div>
+                </div>
+            </template>
+        </template>
+        <template if:true={accounts.error}>
+            <div>{accounts.error}</div>
+        </template>
+    </lightning-card>
+</template>
